@@ -1,2 +1,2 @@
 [config]
-command = sudo bash deploy.sh
+command = bash deploy.sh
