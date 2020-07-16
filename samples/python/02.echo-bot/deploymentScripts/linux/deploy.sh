@@ -67,7 +67,13 @@ fi
 # Utility Functions
 # -----------------
 
-selectPythonVersion () {
+upgradePython () {
+  echo "sudo apt-get update"
+  sudo apt-get update
+
+  echo "sudo apt-get install python3.8"
+  sudo apt-get install python3.8
+
   PYTHON_RUNTIME=python-3.8
   PYTHON_VER=3.8
   PYTHON_EXE=%SYSTEMDRIVE%\python38\python.exe
@@ -86,20 +92,21 @@ if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
   exitWithMessageOnError "Kudu Sync failed"
 fi
 
-# 2. Select python version
-selectPythonVersion
+# 2. Upgrade python version
+upgradePython
 
 # 4. Install packages
-echo "pip install --upgrade pip"
-pip install --upgrade pip
+#echo "sudo python3.8 -m pip install --upgrade pip"
+#sudo python3.8 -m pip install --upgrade pip
 
-echo "pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
-python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
+echo "sudo python3.8 -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
+sudo python3.8 -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
-echo "pip install..."
+echo "sudo python3.8 -m pip install -r requirements.txt --extra-index-url..."
 # pip install -r requirements.txt
-python -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
+sudo python3.8 -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 # eval $NPM_CMD install --production
+
 exitWithMessageOnError "pip install failed"
 cd - > /dev/null
 
