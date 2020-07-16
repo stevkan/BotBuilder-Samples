@@ -90,10 +90,13 @@ fi
 selectPythonVersion
 
 # 4. Install packages
+echo "pip install --upgrade pip"
+pip install --upgrade pip
+
 echo "pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
-echo "pip install"
+echo "pip install..."
 # pip install -r requirements.txt
 python -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 # eval $NPM_CMD install --production
