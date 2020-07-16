@@ -68,9 +68,9 @@ fi
 # -----------------
 
 selectPythonVersion () {
-  PYTHON_RUNTIME=python-2.7
-  PYTHON_VER=2.7
-  PYTHON_EXE=%SYSTEMDRIVE%\python27\python.exe
+  PYTHON_RUNTIME=python-3.8
+  PYTHON_VER=3.8
+  PYTHON_EXE=%SYSTEMDRIVE%\python38\python.exe
   PYTHON_ENV_MODULE=virtualenv
 }
 
@@ -82,17 +82,20 @@ echo Handling python deployment.
 
 # 1. KuduSync
 if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
-  "$KUDU_SYNC_CMD" -v 50 -f "$DEPLOYMENT_SOURCE" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh"
+  "$KUDU_SYNC_CMD" -v 50 -f "$DEPLOYMENT_SOURCE" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh;deploymentTemplates"
   exitWithMessageOnError "Kudu Sync failed"
 fi
 
 # 2. Select python version
-# selectPythonVersion
+selectPythonVersion
 
 # 4. Install packages
-echo "Pip install requirements."
+echo "pip config set extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
+python -m pip config set extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
+
+echo "pip install"
 # pip install -r requirements.txt
-pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
+python -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 # eval $NPM_CMD install --production
 exitWithMessageOnError "pip install failed"
 cd - > /dev/null
