@@ -68,14 +68,14 @@ fi
 # -----------------
 
 upgradePython () {
-  echo "sudo apt-get update"
-  sudo apt-get update
+  echo "apt-get update"
+  apt-get update
 
-  echo "sudo apt-get install python3.8"
-  sudo apt-get install python3.8
+  echo "apt-get install python3.6"
+  apt-get install python3.6
 
-  PYTHON_RUNTIME=python-3.8
-  PYTHON_VER=3.8
+  PYTHON_RUNTIME=python-3.6
+  PYTHON_VER=3.6
   PYTHON_EXE=%SYSTEMDRIVE%\python38\python.exe
   PYTHON_ENV_MODULE=virtualenv
 }
@@ -96,15 +96,15 @@ fi
 upgradePython
 
 # 4. Install packages
-#echo "sudo python3.8 -m pip install --upgrade pip"
-#sudo python3.8 -m pip install --upgrade pip
+echo "python3.6 -m pip install --upgrade pip"
+python3.6 -m pip install --upgrade pip
 
-echo "sudo python3.8 -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
-sudo python3.8 -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
+echo "python3.6 -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
+python3.6 -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
-echo "sudo python3.8 -m pip install -r requirements.txt --extra-index-url..."
+echo "python3.6 -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 # pip install -r requirements.txt
-sudo python3.8 -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
+python3.6 -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 # eval $NPM_CMD install --production
 
 exitWithMessageOnError "pip install failed"
