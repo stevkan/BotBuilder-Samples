@@ -96,16 +96,15 @@ fi
 #upgradePython
 
 # 4. Install packages
-#echo "python -m pip install --upgrade pip"
-#python -m pip install --upgrade pip
+echo "python -m pip install --upgrade pip"
+python -m pip install --upgrade pip
 
 echo "python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
-echo "python -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
-# pip install -r requirements.txt
+echo "python -m pip install -r requirements.txt"
 python -m pip install -r requirements.txt
-# eval $NPM_CMD install --production
+# python -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
 exitWithMessageOnError "pip install failed"
 cd - > /dev/null
