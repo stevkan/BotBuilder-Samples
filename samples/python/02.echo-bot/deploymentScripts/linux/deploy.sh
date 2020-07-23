@@ -99,11 +99,13 @@ echo "show python versions"
 ls /usr/bin/python*
 
 # 4. Install packages
-echo "python -m pip install --upgrade pip"
-python -m pip install --upgrade pip
+#echo "python -m pip install --upgrade pip"
+#python -m pip install --upgrade pip
+#Requirement already up-to-date: pip
 
-echo "apt-get install python-setuptools"
-apt-get install python-setuptools
+#echo "apt-get install python-setuptools"
+#apt-get install python-setuptools
+#E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied) 
 
 #echo "python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 #python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
