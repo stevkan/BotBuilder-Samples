@@ -68,11 +68,11 @@ fi
 # -----------------
 
 upgradePython () {
-  echo "sudo apt-get update"
-  sudo apt-get update
+  echo "apt-get update"
+  apt-get update
 
-  echo "sudo apt-get install python3.5"
-  sudo apt-get install python3.5
+  echo "apt-get install python3.5"
+  apt-get install python3.5
 
   PYTHON_RUNTIME=python-3.5
   PYTHON_VER=3.5
@@ -99,17 +99,17 @@ echo "show python versions"
 ls /usr/bin/python*
 
 # 4. Install packages
-echo "python3 -m pip install --upgrade pip"
-python3 -m pip install --upgrade pip
+echo "python -m pip install --upgrade pip"
+python -m pip install --upgrade pip
 
-echo "apt-get install python3-setuptools"
-apt-get install python3-setuptools
+echo "apt-get install python-setuptools"
+apt-get install python-setuptools
 
 #echo "python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 #python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
-echo "python3 -m pip install --requirement requirements.txt -f ./dependencies"
-python3 -m pip install --requirement requirements.txt -f ./dependencies
+echo "python -m pip install --requirement requirements.txt -f ./dependencies"
+python -m pip install --requirement requirements.txt -f ./dependencies
 # python -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
 exitWithMessageOnError "pip install failed"
