@@ -68,15 +68,15 @@ fi
 # -----------------
 
 upgradePython () {
-  echo "apt-get update"
-  apt-get update
+  echo "sudo apt-get update"
+  sudo apt-get update
 
-  echo "apt-get install python3.6"
-  apt-get install python3.6
+  echo "sudo apt-get install python3.5"
+  sudo apt-get install python3.5
 
-  PYTHON_RUNTIME=python-3.6
-  PYTHON_VER=3.6
-  PYTHON_EXE=%SYSTEMDRIVE%\python38\python.exe
+  PYTHON_RUNTIME=python-3.5
+  PYTHON_VER=3.5
+  PYTHON_EXE=%SYSTEMDRIVE%\python3.5\python.exe
   PYTHON_ENV_MODULE=virtualenv
 }
 
@@ -102,8 +102,8 @@ fi
 #echo "python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 #python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
-echo "python -m pip install --requirement requirements.txt -f ./dependencies --no-index"
-python -m pip install --requirement requirements.txt -f ./dependencies --no-index
+echo "python3 -m pip install --requirement requirements.txt -f ./dependencies"
+python3 -m pip install --requirement requirements.txt -f ./dependencies
 # python -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
 exitWithMessageOnError "pip install failed"
