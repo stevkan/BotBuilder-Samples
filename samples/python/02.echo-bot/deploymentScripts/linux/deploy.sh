@@ -102,8 +102,8 @@ ls /usr/bin/python*
 echo "python3 -m pip install --upgrade pip"
 python3 -m pip install --upgrade pip
 
-echo "sudo apt-get install python3-setuptools"
-sudo apt-get install python3-setuptools
+echo "apt-get install python3-setuptools"
+apt-get install python3-setuptools
 
 #echo "python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 #python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
