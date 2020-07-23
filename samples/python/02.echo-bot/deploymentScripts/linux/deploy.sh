@@ -99,6 +99,9 @@ fi
 #echo "python -m pip install --upgrade pip"
 #python -m pip install --upgrade pip
 
+echo "show python versions"
+ls /usr/bin/python*
+
 #echo "python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 #python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
