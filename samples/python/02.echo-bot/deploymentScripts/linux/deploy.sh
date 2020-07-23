@@ -95,12 +95,15 @@ fi
 # 2. Upgrade python version
 #upgradePython
 
+echo "show python versions"
+ls /usr/bin/python*
+
 # 4. Install packages
 echo "python3 -m pip install --upgrade pip"
 python3 -m pip install --upgrade pip
 
-echo "show python versions"
-ls /usr/bin/python*
+echo "sudo apt-get install python3-setuptools"
+sudo apt-get install python3-setuptools
 
 #echo "python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 #python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
