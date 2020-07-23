@@ -84,7 +84,7 @@ upgradePython () {
 # Deployment
 # ----------
 
-echo Handling python deployment.
+echo ===== Starting python custom deploy.sh =====
 
 # 1. KuduSync
 if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
@@ -96,8 +96,8 @@ fi
 #upgradePython
 
 # 4. Install packages
-#echo "python -m pip install --upgrade pip"
-#python -m pip install --upgrade pip
+echo "python3 -m pip install --upgrade pip"
+python3 -m pip install --upgrade pip
 
 echo "show python versions"
 ls /usr/bin/python*
