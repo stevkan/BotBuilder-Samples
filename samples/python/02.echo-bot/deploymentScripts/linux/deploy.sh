@@ -122,6 +122,9 @@ python3 -m pip install --upgrade pip
 echo "cd dependencies"
 cd dependencies
 
+echo "python3 -m pip install cryptography==2.8.0 -f ./ --no-index"
+python3 -m pip install cryptography==2.8.0 -f ./ --no-index
+
 echo "python3 -m pip install --requirement ../requirements.txt -f ./ --no-index"
 python3 -m pip install --requirement ../requirements.txt -f ./ --no-index
 # python -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
