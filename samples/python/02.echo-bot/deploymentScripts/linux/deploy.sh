@@ -107,7 +107,7 @@ python3 --version
 echo "python3m --version"
 python3m --version
 
-# 4. Install packages
+# 4. Install packages 
 #echo "python3 -m pip install --upgrade pip"
 #python3 -m pip install --upgrade pip
 #Requirement already up-to-date: pip in /usr/local/lib/python3.5/dist-packages
