@@ -132,16 +132,16 @@ echo "python3 -m pip install cryptography==2.8.0"
 python3 -m pip install cryptography==2.8.0
 
 echo "python3 -m pip install yarl==1.4.2 -f ./"
-python3 -m pip install yarl==1.4.2 -f ./ --no-index
+python3 -m pip install yarl==1.4.2 -f ./
 
 echo "python3 -m pip install multidict -f ./"
-python3 -m pip install multidict -f ./ --no-index
+python3 -m pip install multidict -f ./
 
 echo "python3 -m pip install aiohttp -f ./"
-python3 -m pip install aiohttp -f ./ --no-index
+python3 -m pip install aiohttp -f ./
 
 echo "python3 -m pip install idna-ssl -f ./"
-python3 -m pip install idna-ssl -f ./ --no-index
+python3 -m pip install idna-ssl -f ./
 
 #echo "python3 -m pip install --requirement ../azure-unresolved-requirements.txt -f ./ --no-index"
 #python3 -m pip install --requirement ../azure-unresolved-requirements.txt -f ./ --no-index
