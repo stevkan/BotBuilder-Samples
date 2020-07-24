@@ -110,8 +110,8 @@ ls /usr/bin/python*
 #echo "python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 #python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
-echo "python3 -m pip install --requirement requirements.txt -f ./dependencies"
-python3 -m pip install --requirement requirements.txt -f ./dependencies
+echo "python3 -m pip install --requirement requirements.txt -f ./dependencies --no-index"
+python3 -m pip install --requirement requirements.txt -f ./dependencies --no-index
 # python -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
 exitWithMessageOnError "pip install failed"
