@@ -116,6 +116,12 @@ python3m --version
 #apt-get install python-setuptools
 #E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied) 
 
+echo pip install -U setuptools
+pip install -U setuptools
+
+echo python3 -m pip install -U setuptools
+python3 -m pip install -U setuptools
+
 #echo "python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 #python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
@@ -125,13 +131,13 @@ cd dependencies
 echo "python3 -m pip install cryptography==2.8.0"
 python3 -m pip install cryptography==2.8.0
 
-echo "python3 -m pip install yarl -f ./ --no-index"
-python3 -m pip install yarl -f ./ --no-index
+echo "python3 -m pip install yarl==1.4.2 -f ./"
+python3 -m pip install yarl==1.4.2 -f ./ --no-index
 
-echo "python3 -m pip install aiohttp -f ./ --no-index"
+echo "python3 -m pip install aiohttp -f ./"
 python3 -m pip install aiohttp -f ./ --no-index
 
-echo "python3 -m pip install idna-ssl -f ./ --no-index"
+echo "python3 -m pip install idna-ssl -f ./"
 python3 -m pip install idna-ssl -f ./ --no-index
 
 #echo "python3 -m pip install --requirement ../azure-unresolved-requirements.txt -f ./ --no-index"
