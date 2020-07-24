@@ -125,14 +125,14 @@ cd dependencies
 echo "python3 -m pip install cryptography==2.8.0"
 python3 -m pip install cryptography==2.8.0
 
+echo "python3 -m pip install yarl -f ./ --no-index"
+python3 -m pip install yarl -f ./ --no-index
+
 echo "python3 -m pip install aiohttp -f ./ --no-index"
 python3 -m pip install aiohttp -f ./ --no-index
 
 echo "python3 -m pip install idna-ssl -f ./ --no-index"
 python3 -m pip install idna-ssl -f ./ --no-index
-
-echo "python3 -m pip install yarl -f ./ --no-index"
-python3 -m pip install yarl -f ./ --no-index
 
 #echo "python3 -m pip install --requirement ../azure-unresolved-requirements.txt -f ./ --no-index"
 #python3 -m pip install --requirement ../azure-unresolved-requirements.txt -f ./ --no-index
