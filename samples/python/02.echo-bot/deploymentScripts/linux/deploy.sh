@@ -108,6 +108,10 @@ echo "python3m --version"
 python3m --version
 
 # 4. Install packages 
+echo "This in reponse to multiple occurrences of WARNING: The script ... is installed in '/home/.local/bin' which is not on PATH."
+echo "export PATH=/home/.local/bin:$PATH"
+export PATH=/home/.local/bin:$PATH
+
 #echo "python3 -m pip install --upgrade pip"
 #python3 -m pip install --upgrade pip
 #Requirement already up-to-date: pip in /usr/local/lib/python3.5/dist-packages
@@ -158,10 +162,6 @@ python3 -m pip install --requirement ../requirements.txt -f ./ --no-index
 #Successfully installed PyJWT-1.5.3 adal-1.2.1 botbuilder-core-4.10.0.20200724.dev149696 botbuilder-integration-aiohttp-4.10.0.20200724.dev149696 botbuilder-schema-4.10.0.20200724.dev149696 botframework-connector-4.10.0.20200724.dev149696 certifi-2020.6.20 isodate-0.6.0 jsonpickle-1.2 msal-1.2.0 msrest-0.6.10 oauthlib-3.1.0 python-dateutil-2.8.1 requests-2.23.0 requests-oauthlib-1.3.0 urllib3-1.25.10        
 
 # python -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
-
-echo "This in reponse to WARNING: The script pyjwt is installed in '/home/.local/bin' which is not on PATH."
-echo "export PATH=/home/.local/bin:$PATH"
-export PATH=/home/.local/bin:$PATH
 
 exitWithMessageOnError "pip install failed"
 cd - > /dev/null
