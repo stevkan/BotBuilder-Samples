@@ -108,9 +108,9 @@ echo "python3m --version"
 python3m --version
 
 # 4. Install packages
-echo "python3 -m pip install --upgrade pip"
-python3 -m pip install --upgrade pip
-#Requirement already up-to-date: pip
+#echo "python3 -m pip install --upgrade pip"
+#python3 -m pip install --upgrade pip
+#Requirement already up-to-date: pip in /usr/local/lib/python3.5/dist-packages
 
 #echo "apt-get install python-setuptools"
 #apt-get install python-setuptools
@@ -122,8 +122,8 @@ python3 -m pip install --upgrade pip
 echo "cd dependencies"
 cd dependencies
 
-echo "python3 -m pip install cryptography==2.8.0 -f ./ --no-index"
-python3 -m pip install cryptography==2.8.0 -f ./ --no-index
+echo "python3 -m pip install cryptography==2.8.0"
+python3 -m pip install cryptography==2.8.0
 
 echo "python3 -m pip install --requirement ../requirements.txt -f ./ --no-index"
 python3 -m pip install --requirement ../requirements.txt -f ./ --no-index
