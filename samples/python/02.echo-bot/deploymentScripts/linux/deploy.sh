@@ -98,12 +98,12 @@ fi
 echo "show python versions"
 ls /usr/bin/python*
 
-echo "python --version"
-python --version
+echo "python3 --version"
+python3 --version
 
 # 4. Install packages
-echo "python -m pip install --upgrade pip"
-python -m pip install --upgrade pip
+echo "python3 -m pip install --upgrade pip"
+python3 -m pip install --upgrade pip
 #Requirement already up-to-date: pip
 
 #echo "apt-get install python-setuptools"
@@ -113,8 +113,8 @@ python -m pip install --upgrade pip
 #echo "python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/"
 #python -m pip config set global.extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
-echo "python -m pip install --requirement requirements.txt -f ./dependencies --no-index"
-python -m pip install --requirement requirements.txt -f ./dependencies --no-index
+echo "python3 -m pip install --requirement requirements.txt -f ./dependencies --no-index"
+python3 -m pip install --requirement requirements.txt -f ./dependencies --no-index
 # python -m pip install -r requirements.txt --extra-index-url https://pkgs.dev.azure.com/ConversationalAI/BotFramework/_packaging/SDK/pypi/simple/
 
 exitWithMessageOnError "pip install failed"
