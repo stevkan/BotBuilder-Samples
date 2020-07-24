@@ -102,8 +102,8 @@ echo "python --version"
 python --version
 
 # 4. Install packages
-#echo "python -m pip install --upgrade pip"
-#python -m pip install --upgrade pip
+echo "python -m pip install --upgrade pip"
+python -m pip install --upgrade pip
 #Requirement already up-to-date: pip
 
 #echo "apt-get install python-setuptools"
