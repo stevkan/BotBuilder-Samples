@@ -98,8 +98,14 @@ fi
 echo "show python versions"
 ls /usr/bin/python*
 
+echo "python --version"
+python --version
+
 echo "python3 --version"
 python3 --version
+
+echo "python3m --version"
+python3m --version
 
 # 4. Install packages
 echo "python3 -m pip install --upgrade pip"
