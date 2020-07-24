@@ -122,11 +122,17 @@ python3m --version
 echo "cd dependencies"
 cd dependencies
 
-echo "python3 -m pip install cryptography==2.8.0"
-python3 -m pip install cryptography==2.8.0
+#echo "python3 -m pip install cryptography==2.8.0"
+#python3 -m pip install cryptography==2.8.0
 
-echo "python3 -m pip install aiohttp==3.6.2"
-python3 -m pip install aiohttp==3.6.2
+#echo "python3 -m pip install aiohttp -f ./ --no-index"
+#python3 -m pip install aiohttp -f ./ --no-index
+
+#echo "python3 -m pip install aiohttp==3.6.2 -f ./ --no-index"
+#python3 -m pip install aiohttp==3.6.2 -f ./ --no-index
+
+echo "python3 -m pip install --requirement ../azure-unresolved-requirements.txt -f ./ --no-index"
+python3 -m pip install --requirement ../azure-unresolved-requirements.txt -f ./ --no-index
 
 echo "python3 -m pip install --requirement ../requirements.txt -f ./ --no-index"
 python3 -m pip install --requirement ../requirements.txt -f ./ --no-index
